@@ -125,8 +125,8 @@ while True:                                                          # Main loop
     #CH3 = (CH3_1 * 0.00000014305116451396519112172020932677)         # applies a conversion constant achieve the correct output as an interger for channel 3
     
     Ch1_array[loop_count]=CH1
-    ch1_sum = sum(Ch1_array)
-    avg = int(ch1_sum/60)
+    ch1_sum = sum(Ch1_array)                                          # adds all the values in the Ch1_array together
+    avg = int(ch1_sum/60)                                             # this averages 60 outputs that are stored in the CH1_array
     
     
     
@@ -139,7 +139,7 @@ while True:                                                          # Main loop
     #print("ch2: ",CH2)                                              # print out data form channel 2
     #print("ch3: ",CH3)                                              # print out data form channel 3
        
-    if loop_count < 59:
+    if loop_count < 59:                                              # keeps a loop count from 0 to 59 to send an output to the Ch1_array
         loop_count = int(1 + loop_count)
     else:
         loop_count = 0    
